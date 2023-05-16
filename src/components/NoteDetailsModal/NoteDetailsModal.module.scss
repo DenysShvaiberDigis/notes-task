@@ -1,0 +1,19 @@
+.noteWrapper {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .noteTitle {
+    padding-bottom: 1rem;
+  }
+
+  .dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-style: italic;
+  }
+}

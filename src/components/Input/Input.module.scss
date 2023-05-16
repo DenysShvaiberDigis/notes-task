@@ -1,0 +1,49 @@
+@import '../../theme/variables.scss';
+
+.shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+  color: $black;
+}
+
+.label {
+  color: $gray300;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 300ms ease all;
+
+  &.shrink {
+    @extend .shrinkLabel;
+  }
+}
+
+.input {
+  background: none;
+  background-color: white;
+  color: $gray500;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $gray500;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus ~ .label,
+  &.has-value ~ .label {
+    @extend .shrinkLabel;
+  }
+}
+
+.group {
+  position: relative;
+  margin: 1.5rem 0;
+}

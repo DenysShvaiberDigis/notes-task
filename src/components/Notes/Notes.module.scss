@@ -1,0 +1,88 @@
+@import '../../theme/variables.scss';
+
+.appContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .searchInput {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+
+  .sortDropdown {
+    display: flex;
+    justify-content: start;
+  }
+
+  .appHeading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $white;
+  }
+
+  .notesGrid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    );
+    gap: 20px;
+  }
+
+  .addBtn {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $accent500;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $accent300;
+    }
+  }
+}
+
+@media screen and (max-width: $above-tablets-width) {
+  .appContainer {
+    .notesGrid {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+      );
+    }
+  }
+}
+
+@media screen and (max-width: $under-tablet-width) {
+  .appContainer {
+    .notesGrid {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+      );
+    }
+  }
+}
+
+@media screen and (max-width: $mobiles-width) {
+  .appContainer {
+    .notesGrid {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(350px, 1fr)
+      );
+    }
+  }
+}

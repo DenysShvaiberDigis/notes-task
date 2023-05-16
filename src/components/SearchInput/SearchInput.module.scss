@@ -1,0 +1,37 @@
+@import '../../theme/variables.scss';
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  border: 2px solid $accent500;
+  border-radius: 20px;
+  padding: 0 10px;
+
+  .input {
+    flex: 1;
+    border: none;
+    background: none;
+    color: $white;
+    font-size: 16px;
+    outline: none;
+
+    &::placeholder {
+      color: $gray100;
+    }
+  }
+
+  .searchIcon {
+    width: 20px;
+    height: 20px;
+    fill: $white;
+    stroke: $accent500;
+    margin-right: 10px;
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: $gray100;
+    }
+  }
+}
